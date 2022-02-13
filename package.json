@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite ",
+    "dev": "vite & npm run sass ",
+    "sass": "sass --watch scss/index.scss styles/index.css",
     "build": " vite build ",
     "preview": "vite preview"
   },
