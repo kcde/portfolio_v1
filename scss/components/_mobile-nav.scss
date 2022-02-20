@@ -1,0 +1,19 @@
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--clr-primary);
+
+  padding: var(--spc-3xl) var(--spc-md);
+
+  .nav {
+    font-family: 'New York', 'Times New Roman', Times, serif;
+    text-align: right;
+    font-size: 4rem;
+    ul > * + * {
+      margin-top: var(--spc-lg);
+    }
+  }
+}

@@ -4,12 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/scss/index.scss" />
-    <title>Vite App</title>
+    <title>Keside Ezeala | Frontend Developer</title>
+    <meta name="description" content="I’M A FRONT-END DEVELOPER BASED IN ABUJA" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
-    <header></header>
+  <body class="theme__">
+    <div class="mobile-nav flex flex-col space-between">
+      <div class="mobile-nav__head flex space-between">
+        <div>toggle</div>
+        <div>close</div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>About</li>
+          <li>Projects</li>
+          <li>Contacts</li>
+        </ul>
+      </nav>
+    </div>
+    <header class="header">
+      <div class="container flex space-between items-center">
+        <div class="header__name"><a href="/">KESIDE EZEALA</a></div>
+        <div class="header__icon">
+          <div class="ham" id="menu-btn">
+            <div class="ham__top"></div>
+            <div class="ham__mid"></div>
+            <div class="ham__bot"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <i class="fa-solid fa-xmark"></i> -->
+    </header>
 
-    <h1>Frontend Developer</h1>
+    <section>about</section>
+    <section>projects</section>
+    <section>contact</section>
+
+    <footer>footer</footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

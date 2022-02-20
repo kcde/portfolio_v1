@@ -1,3 +1,19 @@
+:root {
+  --clr-beige: #e6e6e6;
+  --clr-black: #000000;
+  --clr-dark-gray: #1a1a1a;
+  --clr-white: #ffffff;
+  --spc-xs: 0.25rem;
+  --spc-sm: 0.5rem;
+  --spc-md: 1rem;
+  --spc-lg: 1.5rem;
+  --spc-xl: 2rem;
+  --spc-2xl: 2.5rem;
+  --spc-3xl: 3.5rem;
+  --clr-primary: var(--clr-beige);
+  --clr-secondary: var(--clr-black);
+}
+
 @font-face {
   font-family: "New York";
   src: url("../../assets/fonts/NewYork/NewYork.woff2");
@@ -77,15 +93,100 @@ select {
     scroll-behavior: auto !important;
   }
 }
-body {
-  font-family: "New York", "Courier New", Courier, monospace;
-  background-color: black;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "New York", Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
-h1 {
-  font-family: "New York", "Courier New", Courier, monospace;
-  color: white;
-  font-weight: 500;
+p {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.theme__dark {
+  --clr-primary: var(--clr-dark-gray);
+  --clr-secondary: var(--clr-white);
+}
+
+.ham > div {
+  width: 40px;
+  height: 3px;
+  background: var(--clr-secondary);
+}
+.ham > * + * {
+  margin-top: 4px;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--clr-primary);
+  padding: var(--spc-3xl) var(--spc-md);
+}
+.mobile-nav .nav {
+  font-family: "New York", "Times New Roman", Times, serif;
+  text-align: right;
+  font-size: 4rem;
+}
+.mobile-nav .nav ul > * + * {
+  margin-top: var(--spc-lg);
+}
+
+.header {
+  padding-top: var(--spc-2xl);
+}
+.header__name {
+  font-weight: 600;
+}
+
+.container {
+  padding: 0 var(--spc-sm);
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=index.css.map */

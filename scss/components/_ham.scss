@@ -1,0 +1,10 @@
+.ham {
+  > div {
+    width: 40px;
+    height: 3px;
+    background: var(--clr-secondary);
+  }
+  > * + * {
+    margin-top: 4px;
+  }
+}

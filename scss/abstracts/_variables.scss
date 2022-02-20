@@ -1,0 +1,14 @@
+@use './colors';
+@use './spacing';
+
+:root {
+  @each $key, $val in colors.$colors {
+    --clr-#{$key}: #{$val};
+  }
+  @each $key, $val in spacing.$spacing {
+    --spc-#{$key}: #{$val};
+  }
+
+  --clr-primary: var(--clr-beige);
+  --clr-secondary: var(--clr-black);
+}
