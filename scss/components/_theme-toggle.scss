@@ -1,0 +1,7 @@
+@use 'sass:color';
+.theme-toggle {
+}
+
+.active {
+  color: var(--clr-toggle-accent);
+}

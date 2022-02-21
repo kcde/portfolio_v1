@@ -1,0 +1,16 @@
+@use './breakpoints' as b;
+// breakpoints
+
+// @each $key, $val in b.$breakpoints{
+//     @mixin
+// }
+
+@mixin breakpoint($bp) {
+  @each $key, $val in b.$breakpoints {
+    @if $bp == $key {
+      @media (min-width: $val) {
+        @content;
+      }
+    }
+  }
+}

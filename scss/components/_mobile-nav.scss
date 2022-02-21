@@ -5,15 +5,15 @@
   right: 0;
   bottom: 0;
   background-color: var(--clr-primary);
-
-  padding: var(--spc-3xl) var(--spc-md);
-
+  padding: var(--spc-3xl) var(--spc-lg);
+  transform: translateY(-100%);
   .nav {
-    font-family: 'New York', 'Times New Roman', Times, serif;
+    font-family: var(--ff-new-york);
     text-align: right;
-    font-size: 4rem;
+    font-size: var(--fs-3xl);
+    letter-spacing: var(--ft-xs);
     ul > * + * {
-      margin-top: var(--spc-lg);
+      margin-top: var(--spc-md);
     }
   }
 }

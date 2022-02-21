@@ -16,16 +16,16 @@
     />
   </head>
   <body class="theme__">
-    <div class="mobile-nav flex flex-col space-between">
-      <div class="mobile-nav__head flex space-between">
-        <div>toggle</div>
-        <div>close</div>
+    <div class="mobile-nav flex flex-col space-between small-scr-only">
+      <div class="mobile-nav__head flex space-between items-center">
+        <div class="theme-toggle"><span class="active">Dark</span> / <span>Light</span></div>
+        <div><i class="fa-solid fa-xmark text-lg"></i></div>
       </div>
       <nav class="nav">
         <ul>
           <li>About</li>
           <li>Projects</li>
-          <li>Contacts</li>
+          <li>Contact</li>
         </ul>
       </nav>
     </div>
@@ -33,16 +33,23 @@
       <div class="container flex space-between items-center">
         <div class="header__name"><a href="/">KESIDE EZEALA</a></div>
         <div class="header__icon">
-          <div class="ham" id="menu-btn">
+          <div class="ham small-scr-only" id="menu-btn">
             <div class="ham__top"></div>
             <div class="ham__mid"></div>
             <div class="ham__bot"></div>
           </div>
+
+          <div class="theme-toggle no-display">
+            <span class="active">Dark</span> / <span>Light</span>
+          </div>
         </div>
       </div>
-      <!-- <i class="fa-solid fa-xmark"></i> -->
     </header>
-
+    <section>
+      <div class="container">
+        <h1 class="text-2xl"><span>Front-end</span> <span>&nbsp; &nbsp; Developer</span></h1>
+      </div>
+    </section>
     <section>about</section>
     <section>projects</section>
     <section>contact</section>

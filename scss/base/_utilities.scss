@@ -1,3 +1,5 @@
+@use '../abstracts/fonts' as f;
+@use '../abstracts//mixins' as m;
 .flex {
   display: flex;
 }
@@ -11,4 +13,20 @@
 }
 .items-center {
   align-items: center;
+}
+
+.no-display {
+  display: none;
+}
+
+.small-scr-only {
+  @include m.breakpoint(md) {
+    display: none;
+  }
+}
+
+@each $key, $val in f.$font-sizes {
+  .text-#{$key} {
+    font-size: #{$val};
+  }
 }

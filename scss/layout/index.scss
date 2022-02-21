@@ -1,5 +1,7 @@
-@import './header';
+@forward './header';
 
 .container {
-  padding: 0 var(--spc-sm);
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1200px;
 }

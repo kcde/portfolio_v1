@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "New York";
+  src: url("../../assets/fonts/NewYork/NewYork.woff2");
+  src: url("../../assets/fonts/NewYork/NewYork.woff") format("woff"), url("../../assets/fonts/NewYork/NewYork.otf") format("opentype"), url("../../assets/fonts/NewYork/NewYork.ttf") format("truetype");
+}
 :root {
   --clr-beige: #e6e6e6;
   --clr-black: #000000;
   --clr-dark-gray: #1a1a1a;
   --clr-white: #ffffff;
+  --clr-gray: #8b8b8b;
   --spc-xs: 0.25rem;
   --spc-sm: 0.5rem;
   --spc-md: 1rem;
@@ -10,15 +16,26 @@
   --spc-xl: 2rem;
   --spc-2xl: 2.5rem;
   --spc-3xl: 3.5rem;
+  --spc-4xl: 5rem;
+  --spc-5xl: 6.5rem;
+  --ff-new-york:  'New York', 'Times New Roman', Times, serif;
+  --ff-helevetica:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2.5rem;
+  --fs-2xl: 3.5rem;
+  --fs-3xl: 4.5rem;
+  --ft-xs: -3px;
+  --ft-sm: -1;
+  --ft-md: 0;
+  --ft-lg: 2px;
   --clr-primary: var(--clr-beige);
   --clr-secondary: var(--clr-black);
+  --clr-toggle-accent: var(--clr-black);
 }
 
-@font-face {
-  font-family: "New York";
-  src: url("../../assets/fonts/NewYork/NewYork.woff2");
-  src: url("../../assets/fonts/NewYork/NewYork.woff") format("woff"), url("../../assets/fonts/NewYork/NewYork.otf") format("opentype"), url("../../assets/fonts/NewYork/NewYork.ttf") format("truetype");
-}
 /* Box sizing rules */
 *,
 *::before,
@@ -99,12 +116,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "New York", Arial, Helvetica, sans-serif;
+  font-family: var(--ff-new-york);
   font-weight: 500;
+  line-height: 1.6;
 }
 
 p {
-  font-size: 16px;
+  font-size: var(--fs-md);
   line-height: 1;
 }
 
@@ -124,9 +142,48 @@ p {
   align-items: center;
 }
 
+.no-display {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .small-scr-only {
+    display: none;
+  }
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-md {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.5rem;
+}
+
+.text-xl {
+  font-size: 2.5rem;
+}
+
+.text-2xl {
+  font-size: 3.5rem;
+}
+
+.text-3xl {
+  font-size: 4.5rem;
+}
+
 .theme__dark {
   --clr-primary: var(--clr-dark-gray);
   --clr-secondary: var(--clr-white);
+  --clr-toggle-accent: var(--clr-gray);
 }
 
 .ham > div {
@@ -145,15 +202,21 @@ p {
   right: 0;
   bottom: 0;
   background-color: var(--clr-primary);
-  padding: var(--spc-3xl) var(--spc-md);
+  padding: var(--spc-3xl) var(--spc-lg);
+  transform: translateY(-100%);
 }
 .mobile-nav .nav {
-  font-family: "New York", "Times New Roman", Times, serif;
+  font-family: var(--ff-new-york);
   text-align: right;
-  font-size: 4rem;
+  font-size: var(--fs-3xl);
+  letter-spacing: var(--ft-xs);
 }
 .mobile-nav .nav ul > * + * {
-  margin-top: var(--spc-lg);
+  margin-top: var(--spc-md);
+}
+
+.active {
+  color: var(--clr-toggle-accent);
 }
 
 .header {
@@ -162,13 +225,23 @@ p {
 .header__name {
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  .header {
+    padding-top: var(--spc-5xl);
+  }
+  .header .theme-toggle {
+    display: initial;
+  }
+}
 
 .container {
-  padding: 0 var(--spc-sm);
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--ff-helevetica);
   background-color: var(--clr-primary);
   color: var(--clr-secondary);
 }
