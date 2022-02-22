@@ -14,3 +14,9 @@
     }
   }
 }
+
+@mixin fluid-font($minSize, $maxSize, $minVw, $maxVw) {
+  font-size: calc(
+    #{$minSize}px + (#{$maxSize} - #{$minSize}) * ((100vw - #{$minVw}px) / (#{$maxVw} - #{$minVw}))
+  );
+}

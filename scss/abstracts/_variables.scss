@@ -1,6 +1,7 @@
 @use './colors';
 @use './spacing';
 @use './fonts';
+
 :root {
   //colors
   @each $key, $val in colors.$colors {
@@ -31,5 +32,5 @@
 
   --clr-primary: var(--clr-beige);
   --clr-secondary: var(--clr-black);
-  --clr-toggle-accent: var(--clr-black);
+  --clr-toggle-accent: var(--clr-gray);
 }
