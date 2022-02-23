@@ -25,6 +25,17 @@
   }
 }
 
+.large-scr-only {
+  display: none;
+  @include m.breakpoint(md) {
+    display: inline-block;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
 @each $key, $val in f.$font-sizes {
   .text-#{$key} {
     font-size: #{$val};

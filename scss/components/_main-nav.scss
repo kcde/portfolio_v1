@@ -1,0 +1,16 @@
+.main-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: clamp(var(--fs-md), 1vw, var(--fs-lg));
+  text-transform: uppercase;
+  &:hover {
+    ul > * + * {
+      margin-top: var(--spc-xs);
+    }
+  }
+
+  li {
+    transition: all 450ms ease-in-out;
+  }
+}

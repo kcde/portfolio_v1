@@ -31,6 +31,10 @@
   --ft-sm: -1;
   --ft-md: 0;
   --ft-lg: 2px;
+  --bp-sm: 578px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
   --clr-primary: var(--clr-beige);
   --clr-secondary: var(--clr-black);
   --clr-toggle-accent: var(--clr-gray);
@@ -153,6 +157,19 @@ p {
   }
 }
 
+.large-scr-only {
+  display: none;
+}
+@media (min-width: 768px) {
+  .large-scr-only {
+    display: inline-block;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
 .text-xs {
   font-size: 0.75rem;
 }
@@ -213,6 +230,20 @@ p {
 }
 .mobile-nav .nav ul > * + * {
   margin-top: var(--spc-md);
+}
+
+.main-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: clamp(var(--fs-md), 1vw, var(--fs-lg));
+  text-transform: uppercase;
+}
+.main-nav:hover ul > * + * {
+  margin-top: var(--spc-xs);
+}
+.main-nav li {
+  transition: all 450ms ease-in-out;
 }
 
 .active {

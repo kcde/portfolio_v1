@@ -1,8 +1,8 @@
 @use './colors';
 @use './spacing';
 @use './fonts';
-
-:root {
+@use './breakpoints';
+:root  {
   //colors
   @each $key, $val in colors.$colors {
     --clr-#{$key}: #{$val};
@@ -28,6 +28,11 @@
 
   @each $key, $val in fonts.$font-tracking {
     --ft-#{$key}: #{$val};
+  }
+
+  //breakpoints
+  @each $key, $val in breakpoints.$breakpoints {
+    --bp-#{$key}: #{$val};
   }
 
   --clr-primary: var(--clr-beige);
