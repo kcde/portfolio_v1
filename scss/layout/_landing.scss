@@ -2,7 +2,7 @@
 
 .landing {
   h1 {
-    @include m.fluid-font(70, 200, 375, 1200);
+    @include m.fluid-head(70, 200, 375, 1200);
 
     > * + * {
       margin-top: var(--spc-sm);
@@ -22,8 +22,7 @@
       max-width: 65%;
     }
     h1 {
-      @include m.fluid-font(91, 101, 768, 900);
-
+      @include m.fluid-head(91, 101, 768, 900);
       > * + * {
         margin-top: var(--spc-xl);
       }
