@@ -1,5 +1,5 @@
 @use '../abstracts/fonts' as f;
-@use '../abstracts//mixins' as m;
+@use '../abstracts/mixins' as m;
 .flex {
   display: flex;
 }
@@ -25,6 +25,14 @@
   }
 }
 
+.medium-scr-only {
+  display: none;
+
+  @include m.breakpoint(sm) {
+    display: block;
+  }
+}
+
 .large-scr-only {
   display: none;
   @include m.breakpoint(md) {
@@ -34,6 +42,10 @@
 
 .relative {
   position: relative;
+}
+
+.all-caps {
+  text-transform: uppercase;
 }
 
 @each $key, $val in f.$font-sizes {
