@@ -1,0 +1,9 @@
+@use '../abstracts/mixins' as m;
+.projects {
+ & .container {
+  border-bottom: 2px solid var(--clr-secondary);
+ }
+ &__head {
+  @include m.fluid-text(font-size, 23.4375rem, 75rem, 3rem, 6.5rem);
+ }
+}

@@ -1,100 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/scss/index.scss" />
-    <title>Keside Ezeala | Frontend Developer</title>
-    <meta name="description" content="I’M A FRONT-END DEVELOPER BASED IN ABUJA" />
-    <meta name="robots" content="index, follow" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body class="theme__">
-    <div class="mobile-nav flex flex-col space-between small-scr-only">
-      <div class="mobile-nav__head flex space-between items-center">
-        <div class="theme-toggle"><span class="active">Dark</span> / <span>Light</span></div>
-        <div><i class="fa-solid fa-xmark text-lg"></i></div>
-      </div>
-      <nav class="nav">
-        <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/scss/index.scss" />
+  <title>Keside Ezeala | Frontend Developer</title>
+  <meta name="description" content="I’M A FRONT-END DEVELOPER BASED IN ABUJA" />
+  <meta name="robots" content="index, follow" />
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+   integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+  />
+ </head>
+ <body class="theme__">
+  <div class="mobile-nav flex flex-col space-between small-scr-only">
+   <div class="mobile-nav__head flex space-between items-center">
+    <div class="theme-toggle">
+     <span class="active">Dark</span> / <span>Light</span>
     </div>
-    <header class="header">
-      <div class="container flex space-between items-center">
-        <div class="header__name"><a href="/">KESIDE EZEALA</a></div>
-        <div class="header__icon">
-          <div class="ham small-scr-only" id="menu-btn">
-            <div class="ham__top"></div>
-            <div class="ham__mid"></div>
-            <div class="ham__bot"></div>
-          </div>
+    <div><i class="fa-solid fa-xmark text-lg"></i></div>
+   </div>
+   <nav class="nav">
+    <ul>
+     <li>About</li>
+     <li>Projects</li>
+     <li>Contact</li>
+    </ul>
+   </nav>
+  </div>
+  <header class="header">
+   <div class="container flex space-between items-center">
+    <div class="header__name"><a href="/">KESIDE EZEALA</a></div>
+    <div class="header__icon">
+     <div class="ham small-scr-only" id="menu-btn">
+      <div class="ham__top"></div>
+      <div class="ham__mid"></div>
+      <div class="ham__bot"></div>
+     </div>
 
-          <div class="theme-toggle no-display">
-            <span class="active">Dark</span> / <span>Light</span>
-          </div>
-        </div>
+     <div class="theme-toggle no-display">
+      <span class="active">Dark</span> / <span>Light</span>
+     </div>
+    </div>
+   </div>
+  </header>
+  <section class="landing">
+   <div class="container relative">
+    <div class="landing__container">
+     <h1 class="text-2xl"><span>Front-end</span> <span> Developer</span></h1>
+    </div>
+
+    <nav class="main-nav large-scr-only">
+     <ul>
+      <li><a href="#about">about</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#contact">contact</a></li>
+     </ul>
+    </nav>
+   </div>
+  </section>
+  <section class="about container all-caps">
+   <div class="about__header">
+    <div class="about__header--title flex flex-col space-between">
+     <p>my profile</p>
+
+     <p class="medium-scr-only">
+      frontend developer <br />
+      based in abuja
+     </p>
+    </div>
+    <div class="about__header--img">
+     <img
+      src="https://via.placeholder.com/350/FFFFFF/000000/?text=myphoto"
+      alt="placeholder img"
+     />
+    </div>
+   </div>
+
+   <div class="about__body">
+    <p>
+     my name is keside or kachukwusideya, if you’re feeling bold. i never know
+     what to fill in my bio, but one thing's for certain:<br />
+     i write front-end code.
+    </p>
+    <p>
+     i’m a front-end developer based in abuja. design is hard, so i just settled
+     with bringing them to life. besides the obvious, i also enjoy gardening and
+     i have a thing for photography which i haven’t figured out yet.
+    </p>
+   </div>
+  </section>
+  <section class="projects">
+   <div class="container">
+    <h2 class="projects__head">Projects</h2>
+    <div class="projects__body">
+     <div class="project flex space-between items-center">
+      <div class="flex flex-col flex-1">
+       <p class="project__name">Lorem ipsum</p>
+       <p class="project__desc small-scr-only">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, sit.
+       </p>
       </div>
-    </header>
-    <section class="landing">
-      <div class="container relative">
-        <div class="landing__container">
-          <h1 class="text-2xl"><span>Front-end</span> <span> Developer</span></h1>
-        </div>
 
-        <nav class="main-nav large-scr-only">
-          <ul>
-            <li><a href="#about">about</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
-          </ul>
-        </nav>
+      <div class="flex-1 max-w-400">
+       <p class="project__desc large-scr-only">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nobis
+        facilis. Expedita architecto aliquam totam optio tempore voluptas!
+       </p>
+       <div class="project__img small-scr-only">
+        <img
+         src="https://via.placeholder.com/150/FFFFFF/000000/?text=myphoto"
+         alt="photo"
+        />
+       </div>
       </div>
-    </section>
-    <section class="about container all-caps">
-      <div class="about__header">
-        <div class="about__header--title flex flex-col space-between">
-          <p>my profile</p>
-
-          <p class="medium-scr-only">
-            frontend developer <br />
-            based in abuja
-          </p>
-        </div>
-        <div class="about__header--img">
-          <img
-            src="https://via.placeholder.com/350/FFFFFF/000000/?text=myphoto"
-            alt="placeholder img"
-          />
-        </div>
+     </div>
+     <div class="project flex space-between items-center">
+      <div class="flex flex-col flex-1">
+       <p class="project__name">Lorem ipsum</p>
+       <p class="project__desc small-scr-only">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, sit.
+       </p>
       </div>
 
-      <div class="about__body">
-        <p>
-          my name is keside or kachukwusideya, if you’re feeling bold. i never know what to fill in
-          my bio, but one thing's for certain:<br />
-          i write front-end code.
-        </p>
-        <p>
-          i’m a front-end developer based in abuja. design is hard, so i just settled with bringing
-          them to life. besides the obvious, i also enjoy gardening and i have a thing for
-          photography which i haven’t figured out yet.
-        </p>
+      <div class="flex-1 max-w-400">
+       <p class="project__desc large-scr-only">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nobis
+        facilis. Expedita architecto aliquam totam optio tempore voluptas!
+       </p>
+       <div class="project__img small-scr-only">
+        <img
+         src="https://via.placeholder.com/150/FFFFFF/000000/?text=myphoto"
+         alt="photo"
+        />
+       </div>
       </div>
-    </section>
-    <section>projects</section>
-    <section>contact</section>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section>contact</section>
 
-    <footer>footer</footer>
-    <script type="module" src="/main.js"></script>
-  </body>
+  <footer>footer</footer>
+  <script type="module" src="/main.js"></script>
+ </body>
 </html>

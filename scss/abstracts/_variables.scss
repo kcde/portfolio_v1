@@ -2,40 +2,40 @@
 @use './spacing';
 @use './fonts';
 @use './breakpoints';
-:root  {
-  //colors
-  @each $key, $val in colors.$colors {
-    --clr-#{$key}: #{$val};
-  }
+:root {
+ //colors
+ @each $key, $val in colors.$colors {
+  --clr-#{$key}: #{$val};
+ }
 
-  //spacing
-  @each $key, $val in spacing.$spacing {
-    --spc-#{$key}: #{$val};
-  }
+ //spacing
+ @each $key, $val in spacing.$spacing {
+  --spc-#{$key}: #{$val};
+ }
 
-  //font family
-  @each $key, $val in fonts.$fonts {
-    --ff-#{$key}: #{$val};
-  }
+ //font family
+ @each $key, $val in fonts.$fonts {
+  --ff-#{$key}: #{$val};
+ }
 
-  //font-sizes
+ //font-sizes
 
-  @each $key, $val in fonts.$font-sizes {
-    --fs-#{$key}: #{$val};
-  }
+ @each $key, $val in fonts.$font-sizes {
+  --fs-#{$key}: #{$val};
+ }
 
-  //letter spacing
+ //letter spacing
 
-  @each $key, $val in fonts.$font-tracking {
-    --ft-#{$key}: #{$val};
-  }
+ @each $key, $val in fonts.$font-tracking {
+  --ft-#{$key}: #{$val};
+ }
 
-  //breakpoints
-  @each $key, $val in breakpoints.$breakpoints {
-    --bp-#{$key}: #{$val};
-  }
+ //breakpoints
+ @each $key, $val in breakpoints.$breakpoints {
+  --bp-#{$key}: #{$val};
+ }
 
-  --clr-primary: var(--clr-beige);
-  --clr-secondary: var(--clr-black);
-  --clr-toggle-accent: var(--clr-gray);
+ --clr-primary: var(--clr-beige);
+ --clr-secondary: var(--clr-black);
+ --clr-toggle-accent: var(--clr-gray);
 }

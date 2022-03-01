@@ -1,0 +1,9 @@
+# Ignore artifacts:
+dist
+styles
+
+
+.prettierrc.json
+
+# Ignore all HTML files:
+

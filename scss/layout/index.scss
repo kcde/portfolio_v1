@@ -1,9 +1,10 @@
 @forward './header';
 @forward './landing';
 @forward './about';
+@forward './projects';
 
 .container {
-  width: 95%;
-  margin: 0 auto;
-  max-width: 1200px;
+ width: 95%;
+ margin: 0 auto;
+ max-width: 1200px;
 }

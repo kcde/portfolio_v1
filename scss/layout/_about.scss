@@ -1,28 +1,31 @@
 @use '../abstracts/mixins' as m;
 
 .about {
-  &__header {
-    @include m.breakpoint(sm) {
-      display: flex;
-      justify-content: space-between;
-      margin: 0 0 0 auto;
+ &__header {
+  & img {
+   filter: grayscale(50%);
+  }
+  @include m.breakpoint(sm) {
+   display: flex;
+   justify-content: space-between;
+   margin: 0 0 0 auto;
 
-      &--title {
-        padding: 3rem 0 3rem 0;
-      }
-    }
-
-    @include m.breakpoint(md) {
-      &--title {
-        padding: 3rem 0 3rem 4rem;
-      }
-    }
+   &--title {
+    padding: 3rem 0 3rem 0;
+   }
   }
 
-  &__body {
-    p {
-      text-indent: var(--spc-4xl);
-      @include m.fluid-text(font-size, 23.4375rem, 75rem, 1rem, 1.8rem);
-    }
+  @include m.breakpoint(md) {
+   &--title {
+    padding: 3rem 0 3rem 4rem;
+   }
   }
+ }
+
+ &__body {
+  p {
+   text-indent: var(--spc-4xl);
+   @include m.fluid-text(font-size, 23.4375rem, 75rem, 1rem, 1.8rem);
+  }
+ }
 }

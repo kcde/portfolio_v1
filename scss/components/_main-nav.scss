@@ -1,26 +1,26 @@
 @use '../abstracts/mixins' as m;
 .main-nav {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-size: clamp(var(--fs-md), 1vw, var(--fs-lg));
-  text-transform: uppercase;
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ font-size: clamp(var(--fs-md), 1vw, var(--fs-lg));
+ text-transform: uppercase;
+ ul > * + * {
+  margin-top: var(--spc-xs);
+ }
+ @include m.breakpoint(xl) {
   ul > * + * {
+   margin-top: 0;
+  }
+
+  &:hover {
+   ul > * + * {
     margin-top: var(--spc-xs);
+   }
   }
-  @include m.breakpoint(xl) {
-    ul > * + * {
-      margin-top: 0;
-    }
+ }
 
-    &:hover {
-      ul > * + * {
-        margin-top: var(--spc-xs);
-      }
-    }
-  }
-
-  li {
-    transition: all 450ms ease-in-out;
-  }
+ li {
+  transition: all 450ms ease-in-out;
+ }
 }
