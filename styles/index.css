@@ -115,11 +115,7 @@ select {
   }
 }
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: var(--ff-new-york);
   font-weight: 500;
   line-height: 1;
@@ -153,6 +149,14 @@ p {
 
 .no-display {
   display: none;
+}
+
+.block {
+  display: block;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .max-w-400 {
@@ -283,6 +287,11 @@ p {
   padding: var(--spc-2xl) 0;
   border-top: 1px solid var(--clr-secondary);
 }
+@media (min-width: 992px) {
+  .project {
+    padding: var(--spc-4xl) 0;
+  }
+}
 .project__name {
   text-transform: uppercase;
   font-weight: 500;
@@ -348,9 +357,6 @@ p {
 }
 .landing h1 > * + * {
   margin-top: var(--spc-sm);
-}
-.landing h1 span {
-  display: block;
 }
 .landing h1 span:last-child {
   text-align: right;
@@ -435,6 +441,59 @@ p {
   }
 }
 
+.contact h2 {
+  font-size: 3.7rem;
+}
+@media screen and (min-width: 23.4375rem) {
+  .contact h2 {
+    font-size: calc(
+     3.7rem +
+      6.3 *
+      ((100vw - 23.4375rem) / 51.5625)
+    );
+  }
+}
+@media screen and (min-width: 75rem) {
+  .contact h2 {
+    font-size: 10rem;
+  }
+}
+.contact .reach {
+  padding-left: 3.625rem;
+}
+@media screen and (min-width: 23.4375rem) {
+  .contact .reach {
+    padding-left: calc(
+     3.625rem +
+      6.875 *
+      ((100vw - 23.4375rem) / 51.5625)
+    );
+  }
+}
+@media screen and (min-width: 75rem) {
+  .contact .reach {
+    padding-left: 10.5rem;
+  }
+}
+
+.reach a {
+  font-size: 1rem;
+}
+@media screen and (min-width: 23.4375rem) {
+  .reach a {
+    font-size: calc(
+     1rem +
+      0.5 *
+      ((100vw - 23.4375rem) / 51.5625)
+    );
+  }
+}
+@media screen and (min-width: 75rem) {
+  .reach a {
+    font-size: 1.5rem;
+  }
+}
+
 .container {
   width: 95%;
   margin: 0 auto;
@@ -450,6 +509,17 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  position: relative;
+}
+@media (min-width: 992px) {
+  a:hover:after {
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    margin-left: var(--spc-sm);
+    font-weight: 900;
+    content: "\f176";
+    transform: rotate(45deg);
+  }
 }
 
 ul {

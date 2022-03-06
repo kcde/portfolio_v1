@@ -20,6 +20,19 @@ body {
 a {
  text-decoration: none;
  color: inherit;
+ position: relative;
+ @include breakpoint(lg) {
+  &:hover {
+   &:after {
+    font-family: 'Font Awesome 6 Free';
+    position: absolute;
+    margin-left: var(--spc-sm);
+    font-weight: 900;
+    content: '\f176';
+    transform: rotate(45deg);
+   }
+  }
+ }
 }
 
 ul {
