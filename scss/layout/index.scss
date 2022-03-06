@@ -3,9 +3,10 @@
 @forward './about';
 @forward './projects';
 @forward './contact';
+@forward './footer';
 
 .container {
- width: 95%;
- margin: 0 auto;
- max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
 }

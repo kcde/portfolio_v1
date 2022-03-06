@@ -1,164 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/scss/index.scss" />
-  <title>Keside Ezeala | Frontend Developer</title>
-  <meta name="description" content="I’M A FRONT-END DEVELOPER BASED IN ABUJA" />
-  <meta name="robots" content="index, follow" />
-  <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-   integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-   crossorigin="anonymous"
-   referrerpolicy="no-referrer"
-  />
- </head>
- <body class="theme__">
-  <div class="mobile-nav flex flex-col space-between small-scr-only">
-   <div class="mobile-nav__head flex space-between items-center">
-    <div class="theme-toggle">
-     <span class="active">Dark</span> / <span>Light</span>
-    </div>
-    <div><i class="fa-solid fa-xmark text-lg"></i></div>
-   </div>
-   <nav class="nav">
-    <ul>
-     <li>About</li>
-     <li>Projects</li>
-     <li>Contact</li>
-    </ul>
-   </nav>
-  </div>
-  <header class="header">
-   <div class="container flex space-between items-center">
-    <div class="header__name">KESIDE EZEALA</div>
-    <div class="header__icon">
-     <div class="ham small-scr-only" id="menu-btn">
-      <div class="ham__top"></div>
-      <div class="ham__mid"></div>
-      <div class="ham__bot"></div>
-     </div>
-
-     <div class="theme-toggle no-display">
-      <span class="active">Dark</span> / <span>Light</span>
-     </div>
-    </div>
-   </div>
-  </header>
-  <section class="landing">
-   <div class="container relative">
-    <div class="landing__container">
-     <h1 class="text-2xl">
-      <span class="block">Front-end</span> <span class="block"> Developer</span>
-     </h1>
-    </div>
-
-    <nav class="main-nav large-scr-only">
-     <ul>
-      <li><a href="#about">about</a></li>
-      <li><a href="#projects">projects</a></li>
-      <li><a href="#contact">contact</a></li>
-     </ul>
-    </nav>
-   </div>
-  </section>
-  <section class="about container all-caps">
-   <div class="about__header">
-    <div class="about__header--title flex flex-col space-between">
-     <p>my profile</p>
-
-     <p class="medium-scr-only">
-      frontend developer <br />
-      based in abuja
-     </p>
-    </div>
-    <div class="about__header--img">
-     <img
-      src="https://via.placeholder.com/350/FFFFFF/000000/?text=myphoto"
-      alt="placeholder img"
-     />
-    </div>
-   </div>
-
-   <div class="about__body">
-    <p>
-     my name is keside or kachukwusideya, if you’re feeling bold. i never know
-     what to fill in my bio, but one thing's for certain:<br />
-     i write front-end code.
-    </p>
-    <p>
-     i’m a front-end developer based in abuja. design is hard, so i just settled
-     with bringing them to life. besides the obvious, i also enjoy gardening and
-     i have a thing for photography which i haven’t figured out yet.
-    </p>
-   </div>
-  </section>
-  <section class="projects">
-   <div class="container">
-    <h2 class="projects__head">Projects</h2>
-    <div class="projects__body">
-     <div class="project flex space-between items-center">
-      <div class="flex flex-col flex-1">
-       <h3 class="project__name"><a href="#">Lorem ipsum</a></h3>
-       <p class="project__desc small-scr-only">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, sit.
-       </p>
-      </div>
-
-      <div class="flex-1 max-w-400">
-       <p class="project__desc large-scr-only">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nobis
-        facilis. Expedita architecto aliquam totam optio tempore voluptas!
-       </p>
-       <div class="project__img small-scr-only">
-        <img
-         src="https://via.placeholder.com/150/FFFFFF/000000/?text=myphoto"
-         alt="photo"
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/scss/index.scss" />
+        <title>Keside Ezeala | Frontend Developer</title>
+        <meta
+            name="description"
+            content="I’M A FRONT-END DEVELOPER BASED IN ABUJA"
         />
-       </div>
-      </div>
-     </div>
-     <div class="project flex space-between items-center">
-      <div class="flex flex-col flex-1">
-       <h3 class="project__name"><a href="#">Lorem ipsum</a></h3>
-       <p class="project__desc small-scr-only">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, sit.
-       </p>
-      </div>
-
-      <div class="flex-1 max-w-400">
-       <p class="project__desc large-scr-only">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nobis
-        facilis. Expedita architecto aliquam totam optio tempore voluptas!
-       </p>
-       <div class="project__img small-scr-only">
-        <img
-         src="https://via.placeholder.com/150/FFFFFF/000000/?text=myphoto"
-         alt="photo"
+        <meta name="robots" content="index, follow" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
         />
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <section class="contact">
-   <div class="container">
-    <div>
-     <h2>You can</h2>
-     <div class="reach">
-      <h2>reach me on</h2>
-      <a href="mailto:realkeside@gmail.com" class="all-caps"
-       >my personal email</a
-      >
-     </div>
-    </div>
-   </div>
-  </section>
+    </head>
+    <body class="theme__">
+        <div class="mobile-nav flex flex-col space-between small-scr-only">
+            <div class="mobile-nav__head flex space-between items-center">
+                <div class="theme-toggle">
+                    <span class="active">Dark</span> / <span>Light</span>
+                </div>
+                <div><i class="fa-solid fa-xmark text-lg"></i></div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <header class="header">
+            <div class="container flex space-between items-center">
+                <div class="header__name">KESIDE EZEALA</div>
+                <div class="header__icon">
+                    <div class="ham small-scr-only" id="menu-btn">
+                        <div class="ham__top"></div>
+                        <div class="ham__mid"></div>
+                        <div class="ham__bot"></div>
+                    </div>
 
-  <footer>footer</footer>
-  <script type="module" src="/main.js"></script>
- </body>
+                    <div class="theme-toggle no-display">
+                        <span class="active">Dark</span> /
+                        <span>Light</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="landing">
+            <div class="container relative">
+                <div class="landing__container">
+                    <h1 class="text-2xl">
+                        <span class="block">Front-end</span>
+                        <span class="block"> Developer</span>
+                    </h1>
+                </div>
+
+                <nav class="main-nav no-display medium-scr-up">
+                    <ul>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="about container all-caps">
+            <div class="about__header">
+                <div class="about__header--title flex flex-col space-between">
+                    <p>my profile</p>
+
+                    <p class="no-display small-scr-up">
+                        frontend developer <br />
+                        based in abuja
+                    </p>
+                </div>
+                <div class="about__header--img">
+                    <img
+                        src="https://via.placeholder.com/350/FFFFFF/000000/?text=myphoto"
+                        alt="placeholder img"
+                    />
+                </div>
+            </div>
+
+            <div class="about__body">
+                <p>
+                    my name is keside or kachukwusideya, if you’re feeling bold.
+                    i never know what to fill in my bio, but one thing's for
+                    certain:<br />
+                    i write front-end code.
+                </p>
+                <p>
+                    i’m a front-end developer based in abuja. design is hard, so
+                    i just settled with bringing them to life. besides the
+                    obvious, i also enjoy gardening and i have a thing for
+                    photography which i haven’t figured out yet.
+                </p>
+            </div>
+        </section>
+        <section class="projects">
+            <div class="container">
+                <h2 class="projects__head">Projects</h2>
+                <div class="projects__body">
+                    <div class="project flex space-between items-center">
+                        <div class="flex flex-col flex-1">
+                            <h3 class="project__name">
+                                <a href="#">Lorem ipsum</a>
+                            </h3>
+                            <p class="project__desc medium-scr-only max-w-400">
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Ea, sit.
+                            </p>
+                        </div>
+
+                        <div class="flex-1 max-w-400">
+                            <p class="project__desc no-display large-scr-up">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Quia nobis facilis. Expedita
+                                architecto aliquam totam optio tempore voluptas!
+                            </p>
+                            <div class="project__img medium-scr-only">
+                                <img
+                                    src="https://via.placeholder.com/150/FFFFFF/000000/?text=myphoto"
+                                    alt="photo"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project flex space-between items-center">
+                        <div class="flex flex-col flex-1">
+                            <h3 class="project__name">
+                                <a href="#">Lorem ipsum</a>
+                            </h3>
+                            <p class="project__desc medium-scr-only max-w-400">
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Ea, sit.
+                            </p>
+                        </div>
+
+                        <div class="flex-1 max-w-400">
+                            <p class="project__desc no-display large-scr-up">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Quia nobis facilis. Expedita
+                                architecto aliquam totam optio tempore voluptas!
+                            </p>
+                            <div class="project__img medium-scr-only">
+                                <img
+                                    src="https://via.placeholder.com/150/FFFFFF/000000/?text=myphoto"
+                                    alt="photo"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <div>
+                    <h2>You can</h2>
+                    <div class="reach">
+                        <h2>reach me on</h2>
+                        <a href="mailto:realkeside@gmail.com" class="all-caps"
+                            >my personal email</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer__container">
+                    <div>
+                        <div class="no-display large-scr-up">KESIDE EZEALA</div>
+                        <div class="medium-scr-only">
+                            <ul class="all-caps spacer-y-xs">
+                                <li><a href="#">github</a></li>
+                                <li><a href="#">twitter</a></li>
+                                <li><a href="#">instagram</a></li>
+                                <li><a href="#">linkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="no-display large-scr-up">
+                        <p>Back to top</p>
+                    </div>
+                    <div class="flex">
+                        <div
+                            class="flex flex-col space-between medium-scr-only"
+                        >
+                            <p>Back to top</p>
+                            <p>Design Credit</p>
+                        </div>
+
+                        <div class="socials no-display large-scr-up">
+                            <div class="socials__text">Socials</div>
+                            <div class="socials__icon" id="git">
+                                <a href="#">github</a>
+                            </div>
+
+                            <div class="socials__icon" id="twit">
+                                <a href="#">twiiter</a>
+                            </div>
+
+                            <div class="socials__icon" id="ig">
+                                <a href="#">instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="/main.js"></script>
+    </body>
 </html>
