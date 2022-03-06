@@ -1,33 +1,36 @@
 @use '../abstracts/mixins' as m;
 
 .landing {
- h1 {
-  @include m.fluid-head(70, 200, 375, 1200);
+    margin-bottom: 4rem;
+    h1 {
+        @include m.fluid-head(70, 200, 375, 1200);
 
-  > * + * {
-   margin-top: var(--spc-sm);
-  }
+        > * + * {
+            margin-top: var(--spc-sm);
+        }
 
-  span:last-child {
-   text-align: right;
-  }
- }
+        span:last-child {
+            text-align: right;
+        }
+    }
 
- @include m.breakpoint(md) {
-  &__container {
-   max-width: 65%;
-  }
-  h1 {
-   @include m.fluid-head(91, 101, 768, 900);
-   > * + * {
-    margin-top: var(--spc-xl);
-   }
-  }
- }
+    @include m.breakpoint(md) {
+        margin-bottom: 8rem;
 
- @media (min-width: 1800px) {
-  h1 {
-   font-size: 9rem;
-  }
- }
+        &__container {
+            max-width: 65%;
+        }
+        h1 {
+            @include m.fluid-head(91, 101, 768, 900);
+            > * + * {
+                margin-top: var(--spc-xl);
+            }
+        }
+    }
+
+    @media (min-width: 1800px) {
+        h1 {
+            font-size: 9rem;
+        }
+    }
 }

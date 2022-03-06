@@ -1,31 +1,56 @@
 @use '../abstracts/mixins' as m;
 
 .about {
- &__header {
-  & img {
-   filter: grayscale(50%);
-  }
-  @include m.breakpoint(sm) {
-   display: flex;
-   justify-content: space-between;
-   margin: 0 0 0 auto;
+    margin-bottom: 4rem;
 
-   &--title {
-    padding: 3rem 0 3rem 0;
-   }
-  }
+    @include m.breakpoint(md) {
+        margin-bottom: 6rem;
+    }
+    &__header {
+        p:first-child {
+            margin-bottom: var(--spc-md);
+            @include m.breakpoint(sm) {
+                margin-bottom: 0;
+            }
+        }
 
-  @include m.breakpoint(md) {
-   &--title {
-    padding: 3rem 0 3rem 4rem;
-   }
-  }
- }
+        &--img {
+            margin-bottom: var(--spc-3xl);
 
- &__body {
-  p {
-   text-indent: var(--spc-4xl);
-   @include m.fluid-text(font-size, 23.4375rem, 75rem, 1rem, 1.8rem);
-  }
- }
+            @include m.breakpoint(sm) {
+                margin-bottom: 0;
+            }
+        }
+        @include m.breakpoint(sm) {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 3rem auto;
+
+            &--title {
+                padding: 3rem 0 3rem 0;
+            }
+        }
+
+        @include m.breakpoint(md) {
+            &--title {
+                padding: 3rem 0 3rem 4rem;
+            }
+
+            margin: 0 0 6rem auto;
+        }
+    }
+
+    &__body {
+        p {
+            text-indent: var(--spc-4xl);
+            @include m.fluid-text(font-size, 23.4375rem, 75rem, 1rem, 1.8rem);
+        }
+
+        p:first-child {
+            margin-bottom: var(--spc-lg);
+            @include m.breakpoint(sm) {
+                margin-bottom: var(--spc-xl);
+            }
+        }
+    }
 }

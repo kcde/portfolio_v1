@@ -1,16 +1,18 @@
 @use '../abstracts/mixins' as m;
 .header {
- padding-top: var(--spc-2xl);
+    padding-top: var(--spc-2xl);
 
- &__name {
-  font-weight: 600;
- }
+    margin-bottom: 6rem;
+    &__name {
+        font-weight: 600;
+    }
 
- @include m.breakpoint(md) {
-  padding-top: var(--spc-5xl);
+    @include m.breakpoint(md) {
+        padding-top: var(--spc-5xl);
+        margin-bottom: 8rem;
 
-  .theme-toggle {
-   display: initial;
-  }
- }
+        .theme-toggle {
+            display: initial;
+        }
+    }
 }

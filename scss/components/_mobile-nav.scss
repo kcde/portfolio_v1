@@ -1,19 +1,21 @@
+@use '../abstracts/mixins' as m;
 .mobile-nav {
- position: absolute;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background-color: var(--clr-primary);
- padding: var(--spc-3xl) var(--spc-lg);
- transform: translateY(-100%);
- .nav {
-  font-family: var(--ff-new-york);
-  text-align: right;
-  font-size: var(--fs-3xl);
-  letter-spacing: var(--ft-xs);
-  ul > * + * {
-   margin-top: var(--spc-md);
-  }
- }
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--clr-primary);
+    padding: var(--spc-3xl) var(--spc-lg);
+    transform: translateY(-100%);
+    z-index: 10;
+    .nav {
+        font-family: var(--ff-new-york);
+        text-align: right;
+        @include m.fluid-text(font-size, 23.4375rem, 48rem, 3rem, 7rem);
+        letter-spacing: var(--ft-xs);
+        ul > * + * {
+            margin-top: var(--spc-md);
+        }
+    }
 }
