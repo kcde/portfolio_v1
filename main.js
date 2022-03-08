@@ -10,11 +10,14 @@ function toggleTheme() {
 function flipThemeSwitch() {
     themeToggle.forEach((toggle) => {
         toggle.addEventListener('click', (e) => {
-            toggleTheme();
-            toggles.forEach((toggle) => {
-                toggle.classList.remove('active');
-            });
-            if (e.target.classList.contains('toggle')) {
+            if (
+                e.target.classList.contains('toggle') &&
+                !e.target.classList.contains('active')
+            ) {
+                toggleTheme();
+                toggles.forEach((toggle) => {
+                    toggle.classList.remove('active');
+                });
                 e.target.classList.add('active');
             }
         });
