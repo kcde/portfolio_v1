@@ -20,6 +20,7 @@
   --spc-5xl: 6.5rem;
   --ff-new-york:  'New York', 'Times New Roman', Times, serif;
   --ff-helevetica:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ff-montserrat: 'Montserrat', sans-serif;
   --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
   --fs-md: 1rem;
@@ -687,14 +688,14 @@ p {
 }
 
 body {
-  font-family: var(--ff-helevetica);
+  font-family: var(--ff-montserrat);
   background-color: var(--clr-primary);
   color: var(--clr-secondary);
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--clr-secondary);
   position: relative;
 }
 @media (min-width: 992px) {

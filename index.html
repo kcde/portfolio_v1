@@ -3,7 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/scss/index.scss" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
         <title>Keside Ezeala | Frontend Developer</title>
         <meta
             name="description"
@@ -18,11 +24,12 @@
             referrerpolicy="no-referrer"
         />
     </head>
-    <body class="theme__">
+    <body>
         <div class="mobile-nav flex flex-col space-between small-scr-only">
             <div class="mobile-nav__head flex space-between items-center">
                 <div class="theme-toggle">
-                    <span class="active">Dark</span> / <span>Light</span>
+                    <span class="toggle">Dark</span> /
+                    <span class="active toggle">Light</span>
                 </div>
                 <div><i class="fa-solid fa-xmark text-lg"></i></div>
             </div>
@@ -45,8 +52,8 @@
                     </div>
 
                     <div class="theme-toggle no-display">
-                        <span class="active">Dark</span> /
-                        <span>Light</span>
+                        <span class="toggle">Dark</span> /
+                        <span class="active toggle">Light</span>
                     </div>
                 </div>
             </div>
@@ -69,7 +76,7 @@
                 </nav>
             </div>
         </section>
-        <section class="about all-caps">
+        <section class="about all-caps" id="about">
             <div class="container">
                 <div class="about__header">
                     <div
@@ -106,7 +113,7 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="container">
                 <h2 class="projects__head">Projects</h2>
                 <div class="projects__body">
@@ -163,7 +170,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="container">
                 <div>
                     <h2>You can</h2>

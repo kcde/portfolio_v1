@@ -12,14 +12,14 @@
 @use './layout' as *;
 
 body {
-    font-family: var(--ff-helevetica);
+    font-family: var(--ff-montserrat);
     background-color: var(--clr-primary);
     color: var(--clr-secondary);
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--clr-secondary);
     position: relative;
     @include breakpoint(lg) {
         &:after {
