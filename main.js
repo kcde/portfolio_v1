@@ -1,4 +1,7 @@
-const menuBtn = document.getElementById('menu-btn');
+const menuOpenBtn = document.getElementById('menu-btn');
+const menuCloseBtn = document.getElementById('menu-close');
+
+const mobileNav = document.querySelector('.mobile-nav');
 const body = document.querySelector('body');
 const themeToggle = document.querySelectorAll('.theme-toggle');
 const toggles = document.querySelectorAll('.toggle');
@@ -78,5 +81,20 @@ function setTheme() {
         flipThemeSwitch();
     }
 }
+
+function preventScroll(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+}
+
+menuOpenBtn.addEventListener('click', () => {
+    mobileNav.classList.remove('slide-up');
+    body.addEventListener('wheel', preventScroll, { passive: false });
+    menuCloseBtn.addEventListener('click', () => {
+        mobileNav.classList.add('slide-up');
+        body.removeEventListener('wheel', preventScroll, { passive: false });
+    });
+});
 
 setTheme();

@@ -25,13 +25,23 @@
         />
     </head>
     <body>
-        <div class="mobile-nav flex flex-col space-between small-scr-only">
+        <div
+            class="
+                mobile-nav
+                slide-up
+                flex flex-col
+                space-between
+                small-scr-only
+            "
+        >
             <div class="mobile-nav__head flex space-between items-center">
                 <div class="theme-toggle">
                     <span class="toggle dark-toggle">Dark</span> /
                     <span class="active toggle light-toggle">Light</span>
                 </div>
-                <div><i class="fa-solid fa-xmark text-lg"></i></div>
+                <div id="menu-close">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </div>
             </div>
             <nav class="nav">
                 <ul>

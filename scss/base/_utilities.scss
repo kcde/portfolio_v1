@@ -91,6 +91,10 @@
     text-transform: uppercase;
 }
 
+.slide-up {
+    transform: translateY(-100%);
+}
+
 @each $key, $val in f.$font-sizes {
     .text-#{$key} {
         font-size: #{$val};

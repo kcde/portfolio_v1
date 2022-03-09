@@ -222,6 +222,10 @@ p {
   text-transform: uppercase;
 }
 
+.slide-up {
+  transform: translateY(-100%);
+}
+
 .text-xs {
   font-size: 0.75rem;
 }
@@ -272,7 +276,6 @@ p {
   bottom: 0;
   background-color: var(--clr-primary);
   padding: var(--spc-3xl) var(--spc-lg);
-  transform: translateY(-100%);
   z-index: 10;
 }
 .mobile-nav .nav {
