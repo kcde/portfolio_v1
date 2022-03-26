@@ -106,3 +106,6 @@ const scroll = new LocomotiveScroll({
   smooth: true,
   multiplier: 0.2,
 });
+
+// Everything animation
+import { gsap } from 'gsap';
