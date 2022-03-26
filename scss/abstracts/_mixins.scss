@@ -6,42 +6,46 @@
 //     @mixin
 // }
 @mixin breakpoint($bp) {
- @each $key, $val in b.$breakpoints {
-  @if $bp == $key {
-   @media (min-width: $val) {
-    @content;
-   }
+  @each $key, $val in b.$breakpoints {
+    @if $bp == $key {
+      @media (min-width: $val) {
+        @content;
+      }
+    }
   }
- }
 }
 
 @mixin fluid-text($properties, $min-vw, $max-vw, $min-value, $max-value) {
- & {
-  @each $property in $properties {
-   #{$property}: $min-value;
-  }
+  & {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
 
-  @media screen and (min-width: $min-vw) {
-   @each $property in $properties {
-    #{$property}: calc(
-     #{$min-value} +
-      #{f.strip-unit($max-value - $min-value)} *
-      ((100vw - #{$min-vw}) / #{f.strip-unit($max-vw - $min-vw)})
-    );
-   }
-  }
+    @media screen and (min-width: $min-vw) {
+      @each $property in $properties {
+        #{$property}: calc(
+          #{$min-value} +
+            #{f.strip-unit($max-value - $min-value)} *
+            ((100vw - #{$min-vw}) / #{f.strip-unit($max-vw - $min-vw)})
+        );
+      }
+    }
 
-  @media screen and (min-width: $max-vw) {
-   @each $property in $properties {
-    #{$property}: $max-value;
-   }
+    @media screen and (min-width: $max-vw) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
   }
- }
 }
 
 @mixin fluid-head($minSize, $maxSize, $minVw, $maxVw) {
- font-size: calc(
-  #{$minSize}px + (#{$maxSize} - #{$minSize}) *
-   ((100vw - #{$minVw}px) / (#{$maxVw} - #{$minVw}))
- );
+  font-size: calc(
+    #{$minSize}px + (#{$maxSize} - #{$minSize}) *
+      ((100vw - #{$minVw}px) / (#{$maxVw} - #{$minVw}))
+  );
+}
+
+@mixin transition($scope, $duration, $smooth) {
+  transition: $scope $duration $smooth;
 }

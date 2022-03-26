@@ -289,10 +289,10 @@ p {
 @media screen and (min-width: 23.4375rem) {
   .mobile-nav .nav {
     font-size: calc(
-     3rem +
-      4 *
-      ((100vw - 23.4375rem) / 24.5625)
-    );
+          3rem +
+            4 *
+            ((100vw - 23.4375rem) / 24.5625)
+        );
   }
 }
 @media screen and (min-width: 48rem) {
@@ -349,10 +349,10 @@ p {
 @media screen and (min-width: 23.4375rem) {
   .project__name {
     font-size: calc(
-     1.2rem +
-      0.3 *
-      ((100vw - 23.4375rem) / 38.5625)
-    );
+          1.2rem +
+            0.3 *
+            ((100vw - 23.4375rem) / 38.5625)
+        );
   }
 }
 @media screen and (min-width: 62rem) {
@@ -366,10 +366,10 @@ p {
 @media screen and (min-width: 23.4375rem) {
   .project__desc {
     font-size: calc(
-     0.875rem +
-      0.225 *
-      ((100vw - 23.4375rem) / 38.5625)
-    );
+          0.875rem +
+            0.225 *
+            ((100vw - 23.4375rem) / 38.5625)
+        );
   }
 }
 @media screen and (min-width: 62rem) {
@@ -470,9 +470,9 @@ p {
 }
 .landing h1 {
   font-size: calc(
-  70px + (200 - 70) *
-   ((100vw - 375px) / (1200 - 375))
- );
+    70px + (200 - 70) *
+      ((100vw - 375px) / (1200 - 375))
+  );
 }
 .landing h1 > * + * {
   margin-top: var(--spc-sm);
@@ -489,9 +489,9 @@ p {
   }
   .landing h1 {
     font-size: calc(
-  91px + (101 - 91) *
-   ((100vw - 768px) / (900 - 768))
- );
+    91px + (101 - 91) *
+      ((100vw - 768px) / (900 - 768))
+  );
   }
   .landing h1 > * + * {
     margin-top: var(--spc-xl);
@@ -554,10 +554,10 @@ p {
 @media screen and (min-width: 23.4375rem) {
   .about__body p {
     font-size: calc(
-     1rem +
-      0.8 *
-      ((100vw - 23.4375rem) / 51.5625)
-    );
+          1rem +
+            0.8 *
+            ((100vw - 23.4375rem) / 51.5625)
+        );
   }
 }
 @media screen and (min-width: 75rem) {
@@ -594,10 +594,10 @@ p {
 @media screen and (min-width: 23.4375rem) {
   .projects__head {
     font-size: calc(
-     3rem +
-      3.5 *
-      ((100vw - 23.4375rem) / 51.5625)
-    );
+          3rem +
+            3.5 *
+            ((100vw - 23.4375rem) / 51.5625)
+        );
   }
 }
 @media screen and (min-width: 75rem) {
@@ -625,10 +625,10 @@ p {
 @media screen and (min-width: 23.4375rem) {
   .contact h2 {
     font-size: calc(
-     3.7rem +
-      6.3 *
-      ((100vw - 23.4375rem) / 51.5625)
-    );
+          3.7rem +
+            6.3 *
+            ((100vw - 23.4375rem) / 51.5625)
+        );
   }
 }
 @media screen and (min-width: 75rem) {
@@ -642,10 +642,10 @@ p {
 @media screen and (min-width: 23.4375rem) {
   .contact .reach {
     padding-left: calc(
-     3.625rem +
-      6.875 *
-      ((100vw - 23.4375rem) / 51.5625)
-    );
+          3.625rem +
+            6.875 *
+            ((100vw - 23.4375rem) / 51.5625)
+        );
   }
 }
 @media screen and (min-width: 75rem) {
@@ -660,10 +660,10 @@ p {
 @media screen and (min-width: 23.4375rem) {
   .reach a {
     font-size: calc(
-     1rem +
-      0.5 *
-      ((100vw - 23.4375rem) / 51.5625)
-    );
+          1rem +
+            0.5 *
+            ((100vw - 23.4375rem) / 51.5625)
+        );
   }
 }
 @media screen and (min-width: 75rem) {
@@ -694,6 +694,7 @@ body {
   font-family: var(--ff-montserrat);
   background-color: var(--clr-primary);
   color: var(--clr-secondary);
+  transition: background 350ms ease-in-out;
 }
 
 html.has-scroll-smooth {
