@@ -12,5 +12,8 @@
   "prettier": "^2.3.2",
   "sass": "^1.49.7",
   "vite": "^2.8.0"
+ },
+ "dependencies": {
+  "locomotive-scroll": "^4.1.4"
  }
 }

@@ -12,42 +12,51 @@
 @use './layout' as *;
 
 body {
-    font-family: var(--ff-montserrat);
-    background-color: var(--clr-primary);
-    color: var(--clr-secondary);
+  font-family: var(--ff-montserrat);
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 a {
-    text-decoration: none;
-    color: var(--clr-secondary);
-    position: relative;
-    @include breakpoint(lg) {
-        &:after {
-            font-family: 'Font Awesome 6 Free';
-            position: absolute;
-            margin-left: var(--spc-xs);
-            font-weight: 900;
-            content: '\f176';
-            transform: rotate(45deg) scale(0);
-        }
-
-        &:hover::after {
-            transform: rotate(45deg) scale(1);
-        }
+  text-decoration: none;
+  color: var(--clr-secondary);
+  position: relative;
+  @include breakpoint(lg) {
+    &:after {
+      font-family: 'Font Awesome 6 Free';
+      position: absolute;
+      margin-left: var(--spc-xs);
+      font-weight: 900;
+      content: '\f176';
+      transform: rotate(45deg) scale(0);
     }
+
+    &:hover::after {
+      transform: rotate(45deg) scale(1);
+    }
+  }
 }
 
 ul {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 li {
-    text-decoration: none;
-    list-style-type: none;
+  text-decoration: none;
+  list-style-type: none;
 
-    line-height: 1;
+  line-height: 1;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
