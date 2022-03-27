@@ -223,7 +223,7 @@ p {
 }
 
 .slide-up {
-  transform: translateY(-100%);
+  transform: translateY(-100vh);
 }
 
 .text-xs {
@@ -269,7 +269,7 @@ p {
 }
 
 .mobile-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -685,7 +685,7 @@ body {
   font-family: var(--ff-montserrat);
   background-color: var(--clr-primary);
   color: var(--clr-secondary);
-  transition: background 350ms ease-in-out;
+  transition: background-color 450ms ease-in-out;
 }
 
 html.has-scroll-smooth {

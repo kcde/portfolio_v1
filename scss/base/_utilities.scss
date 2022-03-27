@@ -1,102 +1,102 @@
 @use '../abstracts/fonts' as f;
 @use '../abstracts/mixins' as m;
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .flex-col {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .flex-1 {
-    flex: 1;
+  flex: 1;
 }
 
 .space-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .items-between {
-    align-items: space-between;
+  align-items: space-between;
 }
 
 .no-display {
-    display: none;
+  display: none;
 }
 
 .block {
-    display: block;
+  display: block;
 }
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 
 .max-w-400 {
-    max-width: 400px;
+  max-width: 400px;
 }
 
 .spacer-y-xs > * + * {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
 .xsmall-scr-only {
-    @include m.breakpoint(sm) {
-        display: none;
-    }
+  @include m.breakpoint(sm) {
+    display: none;
+  }
 }
 
 .small-scr-only {
-    @include m.breakpoint(md) {
-        display: none;
-    }
+  @include m.breakpoint(md) {
+    display: none;
+  }
 }
 
 .small-scr-up {
-    @include m.breakpoint(sm) {
-        display: block;
-    }
+  @include m.breakpoint(sm) {
+    display: block;
+  }
 }
 
 .medium-scr-only {
-    @include m.breakpoint(lg) {
-        display: none;
-    }
+  @include m.breakpoint(lg) {
+    display: none;
+  }
 }
 
 .medium-scr-up {
-    @include m.breakpoint(md) {
-        display: block;
-    }
+  @include m.breakpoint(md) {
+    display: block;
+  }
 }
 
 .large-scr-only {
-    @include m.breakpoint(xl) {
-        display: none;
-    }
+  @include m.breakpoint(xl) {
+    display: none;
+  }
 }
 .large-scr-up {
-    @include m.breakpoint(lg) {
-        display: block;
-    }
+  @include m.breakpoint(lg) {
+    display: block;
+  }
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 .all-caps {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .slide-up {
-    transform: translateY(-100%);
+  transform: translateY(-100vh);
 }
 
 @each $key, $val in f.$font-sizes {
-    .text-#{$key} {
-        font-size: #{$val};
-    }
+  .text-#{$key} {
+    font-size: #{$val};
+  }
 }

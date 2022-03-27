@@ -15,7 +15,7 @@ body {
   font-family: var(--ff-montserrat);
   background-color: var(--clr-primary);
   color: var(--clr-secondary);
-  @include transition(background, 350ms, ease-in-out);
+  @include transition(background-color, 450ms, ease-in-out);
 }
 
 html.has-scroll-smooth {

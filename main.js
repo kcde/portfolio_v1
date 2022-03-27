@@ -84,16 +84,18 @@ function setTheme() {
 
 function preventScroll(e) {
   e.preventDefault();
-  e.stopPropagation();
+  e.stopImmediatePropagation();
   return false;
 }
 
 menuOpenBtn.addEventListener('click', () => {
   mobileNav.classList.remove('slide-up');
   body.addEventListener('wheel', preventScroll, { passive: false });
+  body.addEventListener('touchmove', preventScroll, { passive: false });
   menuCloseBtn.addEventListener('click', () => {
     mobileNav.classList.add('slide-up');
     body.removeEventListener('wheel', preventScroll, { passive: false });
+    body.removeEventListener('touchmove', preventScroll, { passive: false });
   });
 });
 setTheme();
