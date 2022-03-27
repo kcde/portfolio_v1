@@ -391,7 +391,7 @@ p {
 }
 .socials__text {
   z-index: 10;
-  border: 1px solid gray;
+  border: 1px solid var(--clr-secondary);
   border-top: none;
   position: relative;
   background-color: var(--clr-primary);
@@ -401,7 +401,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  height: 0.5px;
+  height: 1px;
   width: 100%;
   background: var(--clr-secondary);
   transition: width 350ms ease-in-out;

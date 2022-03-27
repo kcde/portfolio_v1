@@ -2,9 +2,11 @@
 const menuOpenBtn = document.getElementById('menu-btn');
 const menuCloseBtn = document.getElementById('menu-close');
 const mobileNav = document.querySelector('.mobile-nav');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 const body = document.querySelector('body');
 const themeToggle = document.querySelectorAll('.theme-toggle');
 const toggles = document.querySelectorAll('.toggle');
+console.log(mobileNavLinks);
 
 function toggleTheme() {
   body.classList.toggle('theme__dark');
@@ -88,17 +90,38 @@ function preventScroll(e) {
   return false;
 }
 
-menuOpenBtn.addEventListener('click', () => {
-  mobileNav.classList.remove('slide-up');
+function openMenu() {
+  // mobileNav.classList.remove('slide-up');
+
+  gsap.to(mobileNav, {
+    y: 0,
+    ease: 'power2.in',
+    duration: 0.5,
+  });
+
   body.addEventListener('wheel', preventScroll, { passive: false });
   body.addEventListener('touchmove', preventScroll, { passive: false });
-  menuCloseBtn.addEventListener('click', () => {
-    mobileNav.classList.add('slide-up');
-    body.removeEventListener('wheel', preventScroll, { passive: false });
-    body.removeEventListener('touchmove', preventScroll, { passive: false });
+}
+
+function closeMenu() {
+  gsap.to(mobileNav, {
+    y: '-100vh',
+    ease: 'power2.out',
+    duration: 0.5,
+  });
+  body.removeEventListener('wheel', preventScroll, { passive: false });
+  body.removeEventListener('touchmove', preventScroll, { passive: false });
+}
+
+mobileNavLinks.forEach((el) => {
+  el.addEventListener('click', () => {
+    closeMenu();
   });
 });
+
 setTheme();
+menuOpenBtn.addEventListener('click', openMenu);
+menuCloseBtn.addEventListener('click', closeMenu);
 
 //Everything smooth scroll
 import LocomotiveScroll from 'locomotive-scroll';
