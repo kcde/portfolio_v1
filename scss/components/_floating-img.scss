@@ -1,0 +1,11 @@
+.floating-img {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50px);
+  z-index: -2;
+  & img {
+    height: 350px;
+    object-fit: cover;
+  }
+}

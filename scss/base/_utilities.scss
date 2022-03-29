@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .items-between {
   align-items: space-between;
 }
@@ -89,10 +93,6 @@
 
 .all-caps {
   text-transform: uppercase;
-}
-
-.slide-up {
-  transform: translateY(-100vh);
 }
 
 @each $key, $val in f.$font-sizes {

@@ -1,23 +1,25 @@
 @use '../abstracts/mixins' as m;
 .project {
- padding: var(--spc-2xl) 0;
- border-top: 1px solid var(--clr-secondary);
+  border-top: 1px solid var(--clr-secondary);
 
- @include m.breakpoint(lg) {
-  padding: var(--spc-4xl) 0;
- }
+  > div {
+    padding: var(--spc-2xl) 0;
+    @include m.breakpoint(lg) {
+      padding: var(--spc-4xl) 0;
+    }
+  }
 
- &__name {
-  @include m.fluid-text(font-size, 23.4375rem, 62rem, 1.2rem, 1.5rem);
-  text-transform: uppercase;
-  font-weight: 500;
- }
+  &__name {
+    @include m.fluid-text(font-size, 23.4375rem, 62rem, 1.2rem, 1.5rem);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 
- &__desc {
-  @include m.fluid-text(font-size, 23.4375rem, 62rem, 0.875rem, 1.1rem);
- }
+  &__desc {
+    @include m.fluid-text(font-size, 23.4375rem, 62rem, 0.875rem, 1.1rem);
+  }
 
- &__img {
-  padding-left: var(--spc-lg);
- }
+  &__img {
+    padding-left: var(--spc-lg);
+  }
 }

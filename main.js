@@ -5,8 +5,6 @@ const mobileNav = document.querySelector('.mobile-nav');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 const body = document.querySelector('body');
 const themeToggle = document.querySelectorAll('.theme-toggle');
-const toggles = document.querySelectorAll('.toggle');
-console.log(mobileNavLinks);
 
 function toggleTheme() {
   body.classList.toggle('theme__dark');

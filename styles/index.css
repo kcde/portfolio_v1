@@ -148,6 +148,10 @@ p {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .items-between {
   align-items: space-between;
 }
@@ -220,10 +224,6 @@ p {
 
 .all-caps {
   text-transform: uppercase;
-}
-
-.slide-up {
-  transform: translateY(-100vh);
 }
 
 .text-xs {
@@ -331,11 +331,13 @@ p {
 }
 
 .project {
-  padding: var(--spc-2xl) 0;
   border-top: 1px solid var(--clr-secondary);
 }
+.project > div {
+  padding: var(--spc-2xl) 0;
+}
 @media (min-width: 992px) {
-  .project {
+  .project > div {
     padding: var(--spc-4xl) 0;
   }
 }
@@ -388,6 +390,7 @@ p {
   position: relative;
   background: var(--clr-primary);
   z-index: 20;
+  cursor: pointer;
 }
 .socials__text {
   z-index: 10;
@@ -437,6 +440,18 @@ p {
 
 .socials:hover #twit {
   transform: translateY(-50px);
+}
+
+.floating-img {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50px);
+  z-index: -2;
+}
+.floating-img img {
+  height: 350px;
+  object-fit: cover;
 }
 
 .header {
