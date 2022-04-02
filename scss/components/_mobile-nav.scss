@@ -7,6 +7,7 @@
   bottom: 0;
   background-color: var(--clr-primary);
   padding: var(--spc-3xl) var(--spc-lg);
+  transform: translateY(-100vh);
   z-index: 10;
   .nav {
     font-family: var(--ff-new-york);

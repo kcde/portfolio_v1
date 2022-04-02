@@ -1,21 +1,19 @@
 @use '../abstracts/mixins' as m;
 .footer {
-    margin-bottom: 5rem;
-    .container {
-    }
+  margin-bottom: 5rem;
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        @include m.breakpoint(lg) {
-            align-items: center;
-        }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @include m.breakpoint(lg) {
+      align-items: center;
     }
+  }
 
-    &__first {
-    }
-    &__mid {
-    }
-    &__last {
-    }
+  &__first {
+  }
+  &__mid {
+  }
+  &__last {
+  }
 }

@@ -26,7 +26,7 @@
     />
   </head>
   <body data-scroll-container>
-    <div class="mobile-nav slide-up flex flex-col space-between small-scr-only">
+    <div class="mobile-nav flex flex-col space-between small-scr-only">
       <div class="mobile-nav__head flex space-between items-center">
         <div class="theme-toggle">
           <span class="toggle dark-toggle">Dark</span> /
@@ -138,6 +138,7 @@
         </div>
       </div>
     </section>
+
     <section class="projects" id="projects" data-scroll-section>
       <div class="container">
         <h2 class="projects__head" data-scroll>Projects</h2>
@@ -146,6 +147,7 @@
             class="project flex space-between items-center"
             data-scroll
             data-scroll-speed="1"
+            data-img="https://images.unsplash.com/photo-1519638399535-1b036603ac77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=731&q=80"
           >
             <div class="flex flex-col flex-1">
               <h3 class="project__name">
@@ -157,7 +159,7 @@
               </p>
             </div>
 
-            <div class="flex-1 relative">
+            <div class="project__desc flex-1 cursor-default">
               <div class="project__img medium-scr-only">
                 <img
                   src="https://via.placeholder.com/150/FFFFFF/000000/?text=myphoto"
@@ -166,55 +168,51 @@
               </div>
               <div class="no-display large-scr-up">
                 <div class="flex justify-end">
-                  <p class="project__desc max-w-400">
+                  <p class="max-w-400">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Quia nobis facilis.
                   </p>
                 </div>
-                <div class="floating-img">
-                  <img
-                    src="https://via.placeholder.com/700x300/FFFFFF/FFFFFF/"
-                    alt="fg"
-                  />
-                </div>
               </div>
             </div>
           </div>
-
-          <!--
           <div
             class="project flex space-between items-center"
             data-scroll
             data-scroll-speed="1"
+            data-img="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=771&q=80"
           >
             <div class="flex flex-col flex-1">
               <h3 class="project__name">
                 <a href="#">Lorem ipsum</a>
               </h3>
               <p class="project__desc medium-scr-only max-w-400">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea,
-                sit.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
+                nobis facilis.
               </p>
             </div>
 
-            <div class="flex-1 max-w-400">
-              <p class="project__desc no-display large-scr-up">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
-                nobis facilis. Expedita architecto aliquam totam optio tempore
-                voluptas!
-              </p>
+            <div class="project__desc flex-1 cursor-default">
               <div class="project__img medium-scr-only">
                 <img
                   src="https://via.placeholder.com/150/FFFFFF/000000/?text=myphoto"
                   alt="photo"
                 />
               </div>
+              <div class="no-display large-scr-up">
+                <div class="flex justify-end">
+                  <p class="max-w-400">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quia nobis facilis.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-           -->
         </div>
       </div>
     </section>
+    <div class="floating-img"></div>
     <section class="contact" id="contact" data-scroll-section>
       <div class="container" data-scroll data-scroll-speed="2">
         <div>

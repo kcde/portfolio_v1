@@ -17,6 +17,7 @@
 
   &__desc {
     @include m.fluid-text(font-size, 23.4375rem, 62rem, 0.875rem, 1.1rem);
+    position: relative;
   }
 
   &__img {

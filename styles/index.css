@@ -226,6 +226,10 @@ p {
   text-transform: uppercase;
 }
 
+.cursor-default {
+  cursor: default;
+}
+
 .text-xs {
   font-size: 0.75rem;
 }
@@ -276,6 +280,7 @@ p {
   bottom: 0;
   background-color: var(--clr-primary);
   padding: var(--spc-3xl) var(--spc-lg);
+  transform: translateY(-100vh);
   z-index: 10;
 }
 .mobile-nav .nav {
@@ -363,6 +368,9 @@ p {
   }
 }
 .project__desc {
+  position: relative;
+}
+.project__desc {
   font-size: 0.875rem;
 }
 @media screen and (min-width: 23.4375rem) {
@@ -443,15 +451,17 @@ p {
 }
 
 .floating-img {
-  position: absolute;
-  left: 100px;
-  top: 50%;
-  transform: translateY(-50%) translateX(-50px);
-  z-index: -2;
-}
-.floating-img img {
-  height: 350px;
-  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  display: none;
+  width: 500px;
+  height: 300px;
+  z-index: -1;
+  object-fit: contain;
+  pointer-events: none;
+  background-color: purple;
 }
 
 .header {

@@ -94,6 +94,9 @@
 .all-caps {
   text-transform: uppercase;
 }
+.cursor-default {
+  cursor: default;
+}
 
 @each $key, $val in f.$font-sizes {
   .text-#{$key} {
