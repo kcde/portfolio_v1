@@ -132,10 +132,14 @@ const scroll = new LocomotiveScroll({
 
 // Everything animation
 import { gsap } from 'gsap';
-
 const projects = document.querySelectorAll('.project');
+
 const projectDescs = document.querySelectorAll('.project__desc');
 let imgContainer = document.querySelector('.floating-img');
+const isMobileBrowser =
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
 
 const pos = {
   x: window.innerWidth / 2,
@@ -157,23 +161,34 @@ let xSet = gsap.quickSetter(imgContainer, 'x', 'px');
 let ySet = gsap.quickSetter(imgContainer, 'y', 'px');
 
 window.addEventListener('mousemove', function (e) {
-  mouse.x = e.x;
-  mouse.y = e.y;
+  if (!isMobileBrowser) {
+    mouse.x = e.x;
+    mouse.y = e.y;
+  }
 });
 
 projectDescs.forEach((project) => {
-  let projectImgUrl = project.parentElement.dataset.img;
+  //can also check for the client accessing the site,
+  //to know if to display floating image or not
   project.addEventListener('mouseenter', function (e) {
-    imgContainer.style.backgroundImage = `url(${projectImgUrl})`;
-    gsap.to(imgContainer, {
-      display: 'block',
-      opacity: 1,
-      duration: 0.5,
-      ease: 'power2.in',
-    });
+    e.preventDefault();
+
+    if (!isMobileBrowser) {
+      let projectImgUrl = project.parentElement.dataset.img;
+
+      imgContainer.style.backgroundImage = `url(${projectImgUrl})`;
+
+      gsap.to(imgContainer, {
+        display: 'block',
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.in',
+      });
+    }
   });
 
   project.addEventListener('mouseleave', function (e) {
+    e.preventDefault();
     gsap.to(imgContainer, {
       display: 'none',
       opacity: 0,
@@ -184,55 +199,10 @@ projectDescs.forEach((project) => {
 });
 
 gsap.ticker.add(function () {
-  //   // adjust speed for higher refresh monitors
+  // adjust speed for higher refresh monitors
   const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
   pos.x += (mouse.x - pos.x) * dt;
   pos.y += (mouse.y - pos.y) * dt;
   xSet(pos.x);
   ySet(pos.y);
 });
-
-//test;
-/*
-let test = document.querySelector('.test');
-
-gsap.set(test, {
-  xPercent: -50,
-  yPercent: -50,
-});
-
-const pos = {
-  x: window.innerWidth / 2,
-  y: window.innerHeight / 2,
-};
-const mouse = {
-  x: pos.x,
-  y: pos.y,
-};
-
-const speed = 0.35;
-//console.log(pos, mouse);
-
-//quick setter for x
-const xSet = gsap.quickSetter(test, 'x', 'px');
-//quick setter for Y
-const YSet = gsap.quickSetter(test, 'y', 'px');
-
-window.addEventListener('mousemove', function (e) {
-  // console.log(e.x);
-
-  mouse.x = e.x;
-  mouse.y = e.y;
-});
-
-gsap.ticker.add(function () {
-  // adjust speed for higher refresh monitors
-  const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
-
-  pos.x += (mouse.x - pos.x) * dt;
-  pos.y += (mouse.y - pos.y) * dt;
-
-  xSet(pos.x);
-  YSet(pos.y);
-});
-*/
