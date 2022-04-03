@@ -18,9 +18,25 @@
   &__desc {
     @include m.fluid-text(font-size, 23.4375rem, 62rem, 0.875rem, 1.1rem);
     position: relative;
+    &:hover {
+      p {
+        animation: flash 1000ms ease-in forwards;
+      }
+    }
   }
 
   &__img {
     padding-left: var(--spc-lg);
+  }
+}
+
+@keyframes flash {
+  from {
+    background-color: white;
+    color: white;
+  }
+  to {
+    background-color: white;
+    color: black;
   }
 }

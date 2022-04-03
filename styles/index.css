@@ -387,10 +387,23 @@ p {
     font-size: 1.1rem;
   }
 }
+.project__desc:hover p {
+  animation: flash 1000ms ease-in forwards;
+}
 .project__img {
   padding-left: var(--spc-lg);
 }
 
+@keyframes flash {
+  from {
+    background-color: white;
+    color: white;
+  }
+  to {
+    background-color: white;
+    color: black;
+  }
+}
 .socials {
   width: 200px;
   height: 50px;
