@@ -150,8 +150,6 @@ const mouse = {
   y: pos.y,
 };
 
-const speed = 0.35;
-
 gsap.set(imgContainer, {
   xPercent: -50,
   yPercent: -50,
@@ -170,35 +168,44 @@ window.addEventListener('mousemove', function (e) {
 projectDescs.forEach((project) => {
   //can also check for the client accessing the site,
   //to know if to display floating image or not
-  project.addEventListener('mouseenter', function (e) {
-    e.preventDefault();
+  let projectImgUrl = project.parentElement.dataset.img;
 
-    if (!isMobileBrowser) {
-      let projectImgUrl = project.parentElement.dataset.img;
+  const projectImg = document.createElement('img');
 
-      imgContainer.style.backgroundImage = `url(${projectImgUrl})`;
+  if (projectImgUrl) {
+    projectImg.src = projectImgUrl;
+  }
 
-      gsap.to(imgContainer, {
-        display: 'block',
-        opacity: 1,
+  if (!isMobileBrowser) {
+    imgContainer.appendChild(projectImg);
+
+    project.addEventListener('mouseenter', function (e) {
+      e.preventDefault();
+
+      gsap.to(projectImg, {
+        opacity: 2,
         duration: 0.5,
         ease: 'power2.in',
       });
-    }
-  });
 
-  project.addEventListener('mouseleave', function (e) {
-    e.preventDefault();
-    gsap.to(imgContainer, {
-      display: 'none',
-      opacity: 0,
-      ease: 'power2.out',
-      duration: 0.5,
+      imgContainer.style.opacity = 1;
     });
-  });
+
+    project.addEventListener('mouseleave', function (e) {
+      e.preventDefault();
+
+      gsap.to(projectImg, {
+        opacity: 0,
+        ease: 'power2.out',
+        duration: 0.5,
+      });
+    });
+  }
 });
 
 gsap.ticker.add(function () {
+  const speed = 0.07;
+
   // adjust speed for higher refresh monitors
   const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
   pos.x += (mouse.x - pos.x) * dt;

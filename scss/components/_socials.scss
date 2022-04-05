@@ -53,11 +53,14 @@
 }
 
 .socials:hover #git {
-  transform: translateY(-150px);
+  transform: translateY(-200px);
 }
 .socials:hover #ig {
-  transform: translateY(-100px);
+  transform: translateY(-150px);
 }
 .socials:hover #twit {
+  transform: translateY(-100px);
+}
+.socials:hover #li {
   transform: translateY(-50px);
 }

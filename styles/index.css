@@ -331,6 +331,10 @@ p {
   transition: all 450ms ease-in-out;
 }
 
+.theme-toggle span {
+  cursor: default;
+}
+
 .active {
   color: var(--clr-toggle-accent);
 }
@@ -386,6 +390,9 @@ p {
   .project__desc {
     font-size: 1.1rem;
   }
+}
+.project__desc p {
+  pointer-events: none;
 }
 .project__desc:hover p {
   animation: flash 1000ms ease-in forwards;
@@ -452,28 +459,36 @@ p {
 }
 
 .socials:hover #git {
-  transform: translateY(-150px);
+  transform: translateY(-200px);
 }
 
 .socials:hover #ig {
-  transform: translateY(-100px);
+  transform: translateY(-150px);
 }
 
 .socials:hover #twit {
+  transform: translateY(-100px);
+}
+
+.socials:hover #li {
   transform: translateY(-50px);
 }
 
 .floating-img {
   position: fixed;
   top: 0;
-  left: 0;
-  opacity: 1;
-  display: none;
+  height: 350px;
   width: 500px;
-  height: 300px;
-  z-index: -1;
-  object-fit: contain;
   pointer-events: none;
+  opacity: 0;
+}
+.floating-img img {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  object-fit: cover;
 }
 
 .header {
@@ -599,6 +614,11 @@ p {
 @media (min-width: 578px) {
   .about__body p:first-child {
     margin-bottom: var(--spc-xl);
+  }
+}
+@media (min-width: 578px) {
+  .about__header--img {
+    max-width: 400px;
   }
 }
 

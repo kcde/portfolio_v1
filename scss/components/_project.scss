@@ -18,6 +18,9 @@
   &__desc {
     @include m.fluid-text(font-size, 23.4375rem, 62rem, 0.875rem, 1.1rem);
     position: relative;
+    p {
+      pointer-events: none;
+    }
     &:hover {
       p {
         animation: flash 1000ms ease-in forwards;

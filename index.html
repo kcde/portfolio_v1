@@ -7,18 +7,6 @@
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <link
-      rel="preload"
-      href="https://images.unsplash.com/photo-1519638399535-1b036603ac77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=731&q=80"
-      as="image"
-      type="image/jpg"
-    />
-    <link
-      rel="preload"
-      href="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=771&q=80"
-      as="image"
-      type="image/jpg"
-    /> -->
 
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
@@ -37,6 +25,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="prefetch" href="./asset/img/me.jpg" />
   </head>
   <body data-scroll-container>
     <div class="mobile-nav flex flex-col space-between small-scr-only">
@@ -113,7 +102,7 @@
     </section>
     <section class="about all-caps" id="about" data-scroll-section>
       <div class="container">
-        <div class="about__header">
+        <div class="about__header" data-scroll>
           <div class="about__header--title flex flex-col space-between">
             <p>my profile</p>
 
@@ -122,11 +111,13 @@
               based in abuja
             </p>
           </div>
-          <div class="about__header--img" data-scroll>
-            <img
-              src="https://via.placeholder.com/350/FFFFFF/000000/?text=myphoto"
-              alt="placeholder img"
-            />
+          <div
+            class="about__header--img"
+            data-scroll
+            data-scroll-speed="2"
+            data-scroll-delay="0.09"
+          >
+            <img src="./asset/img/me.jpg" alt="keside" />
           </div>
         </div>
 
@@ -151,6 +142,7 @@
         </div>
       </div>
     </section>
+    <div class="floating-img"></div>
 
     <section class="projects" id="projects" data-scroll-section>
       <div class="container">
@@ -160,15 +152,14 @@
             class="project flex space-between items-center"
             data-scroll
             data-scroll-speed="1"
-            data-img="https://images.unsplash.com/photo-1519638399535-1b036603ac77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=731&q=80"
+            data-img="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=782&q=80"
           >
             <div class="flex flex-col flex-1">
               <h3 class="project__name">
-                <a href="#">Lorem ipsum</a>
+                <a href="#">prtrts</a>
               </h3>
               <p class="project__desc medium-scr-only max-w-400">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
-                nobis facilis.
+                photo gallery of potraits using the UNSPLASH API
               </p>
             </div>
 
@@ -182,8 +173,8 @@
               <div class="no-display large-scr-up">
                 <div class="flex justify-end">
                   <p class="max-w-400">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quia nobis facilis.
+                    photo gallery of potraits using various front-end
+                    technologies and UNSPLASH API
                   </p>
                 </div>
               </div>
@@ -197,7 +188,7 @@
           >
             <div class="flex flex-col flex-1">
               <h3 class="project__name">
-                <a href="#">Lorem ipsum</a>
+                <a href="#">TODO WEB APP</a>
               </h3>
               <p class="project__desc medium-scr-only max-w-400">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
@@ -225,7 +216,7 @@
         </div>
       </div>
     </section>
-    <div class="floating-img"></div>
+
     <section class="contact" id="contact" data-scroll-section>
       <div class="container" data-scroll data-scroll-speed="2">
         <div>
@@ -253,10 +244,26 @@
             <div class="no-display large-scr-up">KESIDE EZEALA</div>
             <div class="medium-scr-only">
               <ul class="all-caps spacer-y-xs">
-                <li><a href="#">github</a></li>
-                <li><a href="#">twitter</a></li>
-                <li><a href="#">instagram</a></li>
-                <li><a href="#">linkedIn</a></li>
+                <li>
+                  <a target="_blank" href="https://github.com/kcde">github </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://twitter.com/shrtlsmnky"
+                    >twitter</a
+                  >
+                </li>
+                <li>
+                  <a target="_blank" href="https://instagram.com/shrtlsmnky"
+                    >instagram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/keside-ezeala-6b21741b5/"
+                    >linkedIn</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -272,15 +279,26 @@
             <div class="socials no-display large-scr-up">
               <div class="socials__text">Socials</div>
               <div class="socials__icon" id="git">
-                <a href="#">github </a>
+                <a href="https://github.com/kcde">github </a>
               </div>
 
               <div class="socials__icon" id="twit">
-                <a href="#">twiiter</a>
+                <a target="_blank" href="https://twitter.com/shrtlsmnky"
+                  >twiiter</a
+                >
               </div>
 
               <div class="socials__icon" id="ig">
-                <a href="#">instagram</a>
+                <a target="_blank" href="https://instagram.com/shrtlsmnky"
+                  >instagram</a
+                >
+              </div>
+              <div class="socials__icon" id="li">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/keside-ezeala-6b21741b5/"
+                  >linkedIn</a
+                >
               </div>
             </div>
           </div>

@@ -1,29 +1,16 @@
-// .floating-img {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   // transform: translateY(-50%) translateX(-50px);
-//   z-index: -2;
-//   opacity: 1;
-//   pointer-events: none;
-//   pointer-events: none;
-//   height: 350px;
-//   width: 350px;
-
-//   & img {
-//     //object-fit: cover;
-//   }
-// }
-
 .floating-img {
   position: fixed;
   top: 0;
-  left: 0;
-  opacity: 1;
-  display: none;
+  height: 350px;
   width: 500px;
-  height: 300px;
-  z-index: -1;
-  object-fit: contain;
   pointer-events: none;
+  opacity: 0;
+  img {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    object-fit: cover;
+  }
 }

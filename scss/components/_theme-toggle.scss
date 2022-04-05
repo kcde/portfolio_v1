@@ -1,7 +1,10 @@
 @use 'sass:color';
 .theme-toggle {
+  span {
+    cursor: default;
+  }
 }
 
 .active {
- color: var(--clr-toggle-accent);
+  color: var(--clr-toggle-accent);
 }
