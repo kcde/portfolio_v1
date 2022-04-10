@@ -168,11 +168,17 @@ window.addEventListener('mousemove', function (e) {
 projectDescs.forEach((project) => {
   //can also check for the client accessing the site,
   //to know if to display floating image or not
-  let projectImgUrl = project.parentElement.dataset.img;
+  //----------------------------------------------------------------
+
+  //traverse the dom and find closest img src
+  //this is to make sure to get the bundled img src
+  let projectImgUrl = project
+    .closest('.project')
+    .querySelector('.project__img img').src;
 
   const projectImg = document.createElement('img');
 
-  if (projectImgUrl) {
+  if (!project.classList.contains('medium-scr-only')) {
     projectImg.src = projectImgUrl;
   }
 
