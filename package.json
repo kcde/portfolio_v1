@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.7",
     "prettier": "^2.3.2",
     "sass": "^1.49.7",
     "vite": "^2.8.0",
