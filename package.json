@@ -5,11 +5,10 @@
   "scripts": {
     "dev": "vite & npm run sass ",
     "sass": "sass --watch scss/index.scss styles/index.css",
-    "build": " vite build ",
+    "build": "sass scss/index.scss styles/index.css && vite build ",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
     "prettier": "^2.3.2",
     "sass": "^1.49.7",
     "vite": "^2.8.0",

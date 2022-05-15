@@ -4,6 +4,7 @@
   src: url('../asset/fonts/NewYork/NewYork.woff') format('woff'),
     url('../asset/fonts/NewYork/NewYork.otf') format('opentype'),
     url('../asset/fonts/NewYork/NewYork.ttf') format('truetype');
+  display: swap;
 }
 
 $fonts: (

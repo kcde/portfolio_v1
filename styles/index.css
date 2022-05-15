@@ -2,6 +2,7 @@
   font-family: "New York";
   src: url("../asset/fonts/NewYork/NewYork.woff2");
   src: url("../asset/fonts/NewYork/NewYork.woff") format("woff"), url("../asset/fonts/NewYork/NewYork.otf") format("opentype"), url("../asset/fonts/NewYork/NewYork.ttf") format("truetype");
+  display: swap;
 }
 :root {
   --clr-beige: #e6e6e6;
