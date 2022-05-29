@@ -495,6 +495,10 @@ p {
 .header {
   padding-top: var(--spc-2xl);
   margin-bottom: 6rem;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .header__name {
   font-weight: 600;
