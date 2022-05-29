@@ -267,7 +267,8 @@ p {
 .ham > div {
   width: 40px;
   height: 3px;
-  background: var(--clr-secondary);
+  background-color: var(--clr-primary);
+  mix-blend-mode: difference;
 }
 .ham > * + * {
   margin-top: 4px;
@@ -495,10 +496,12 @@ p {
 .header {
   padding-top: var(--spc-2xl);
   margin-bottom: 6rem;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
   position: sticky;
   top: 0;
   z-index: 10;
+  color: var(--clr-primary);
+  mix-blend-mode: difference;
 }
 .header__name {
   font-weight: 600;
