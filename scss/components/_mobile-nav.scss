@@ -17,5 +17,8 @@
     ul > * + * {
       margin-top: var(--spc-md);
     }
+    li {
+      font-size: 20vw;
+    }
   }
 }
