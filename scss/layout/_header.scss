@@ -1,27 +1,22 @@
 @use '../abstracts/mixins' as m;
 .header {
-    padding-top: var(--spc-2xl);
-    margin-bottom: 6rem;
-    position:sticky;
-    top:0;
-    z-index: 5;
-    color:var(--clr-primary);
-    mix-blend-mode: difference;
- 
-  
+  padding-top: var(--spc-2xl);
+  margin-bottom: 6rem;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  color: var(--clr-primary);
+  mix-blend-mode: difference;
+  &__name {
+    font-weight: 600;
+  }
 
-    &__name {
-        font-weight: 600;
+  @include m.breakpoint(md) {
+    padding-top: var(--spc-5xl);
+    margin-bottom: 8rem;
+
+    .theme-toggle {
+      display: initial;
     }
-
-    @include m.breakpoint(md) {
-        padding-top: var(--spc-5xl);
-        margin-bottom: 8rem;
-
-        .theme-toggle {
-            display: initial;
-        }
-    }
+  }
 }
-
-
