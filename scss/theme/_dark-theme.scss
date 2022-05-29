@@ -1,4 +1,11 @@
 .theme__dark {
  --clr-primary: var(--clr-dark-gray);
  --clr-secondary: var(--clr-white);
+
+ .header{ // to make  mix-blend-mode work on the header in dark mode
+    color:var(--clr-secondary);
+ }
+ .ham > div{
+     background-color: var(--clr-secondary)
+ }
 }

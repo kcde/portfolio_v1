@@ -263,6 +263,12 @@ p {
   --clr-primary: var(--clr-dark-gray);
   --clr-secondary: var(--clr-white);
 }
+.theme__dark .header {
+  color: var(--clr-secondary);
+}
+.theme__dark .ham > div {
+  background-color: var(--clr-secondary);
+}
 
 .ham > div {
   width: 40px;
@@ -499,7 +505,7 @@ p {
   backdrop-filter: blur(2px);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 5;
   color: var(--clr-primary);
   mix-blend-mode: difference;
 }
