@@ -2,12 +2,13 @@
 .header {
     padding-top: var(--spc-2xl);
     margin-bottom: 6rem;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     position:sticky;
     top:0;
     z-index: 5;
     color:var(--clr-primary);
     mix-blend-mode: difference;
+ 
   
 
     &__name {
