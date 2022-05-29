@@ -157,6 +157,10 @@ p {
   align-items: space-between;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .no-display {
   display: none;
 }
@@ -738,7 +742,7 @@ html, body {
 }
 
 .footer {
-  margin-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 .footer__container {
   display: flex;
